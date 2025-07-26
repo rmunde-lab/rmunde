@@ -9,6 +9,7 @@
     <meta name="google-site-verification" content="1VaDfz8DIJuywwDfWrZ3xezj9CtjuQ4b2f4mdNefsms" />
     <title>Ram Munde</title>
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
@@ -57,21 +58,23 @@
         }*/
     </style>
     
-<script>
-    // Fetch random image from Unsplash and apply as background
-    fetch("https://source.unsplash.com/random/1920x1080/?nature,landscape")
-        .then((response) => {
-            document.body.style.backgroundImage = `url(${response.url})`;
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "no-repeat";
-        })
-        .catch((err) => {
-            console.error("Failed to load background image", err);
-        });
-</script>
 
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://source.unsplash.com/random/1920x1080/?nature,landscape")
+            .then((response) => {
+                document.body.style.backgroundImage = `url(${response.url})`;
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundPosition = "center";
+                document.body.style.backgroundRepeat = "no-repeat";
+            })
+            .catch((err) => {
+                console.error("Failed to load background image", err);
+            });
+    });
+</script>
+
 <body>
     <div class="container">
         <h1>Ram Munde</h1>
