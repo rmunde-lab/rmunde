@@ -56,6 +56,21 @@
             margin-top: -10px;
         }*/
     </style>
+    
+<script>
+    // Fetch random image from Unsplash and apply as background
+    fetch("https://source.unsplash.com/random/1920x1080/?nature,landscape")
+        .then((response) => {
+            document.body.style.backgroundImage = `url(${response.url})`;
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "no-repeat";
+        })
+        .catch((err) => {
+            console.error("Failed to load background image", err);
+        });
+</script>
+
 </head>
 <body>
     <div class="container">
