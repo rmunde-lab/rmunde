@@ -10,15 +10,17 @@
     <title>Ram Munde</title>
     <style>
         
-        body {
-            font-family: Georgia, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+      body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+    background: url('https://source.unsplash.com/1920x1080/?nature,landscape') no-repeat center center fixed;
+    background-size: cover;
+}
+
         .container {
             background: white;
             padding: 1px 20px;
@@ -60,20 +62,6 @@
     
 
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch("https://source.unsplash.com/random/1920x1080/?nature,landscape")
-            .then((response) => {
-                document.body.style.backgroundImage = `url(${response.url})`;
-                document.body.style.backgroundSize = "cover";
-                document.body.style.backgroundPosition = "center";
-                document.body.style.backgroundRepeat = "no-repeat";
-            })
-            .catch((err) => {
-                console.error("Failed to load background image", err);
-            });
-    });
-</script>
 
 <body>
     <div class="container">
